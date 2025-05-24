@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  postgres:
+    container_name: postgres_DBCA225
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: university
+    ports:
+      - "5432:5432"
+  pgadmin:
+    container_name: pgadmin4_DBCA225
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ca225@just.edu.so
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
